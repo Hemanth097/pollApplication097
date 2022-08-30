@@ -1,25 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Poll Application sample -BeasT9086</title>
-	
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Beast sample page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
 </head>
 <body>
+    <!--
+        options are retrived and stored in each array 
+        
+        input checkbook loop will run for n options times
 
-	<h2>Question</h2>
-	<div class="boxes">
-		<h2 id="test"></h2>
-		<h3 style="width:100px;height:40px;border:1px solid;" onclick="func(1);">option 1</h3>
-		<h3 style="width:100px;height:40px;border:1px solid;" onclick="func(2);">option 2</h3>
-		<input type="text" name="newOption" placeholder="Enter your option"><br>
-		<input type="text" name="your number" placeholder="Enter your number"><br>
-		<input type="submit" name="sub" value="submit your response"><br>
-	</div>
-	
-	<script type="text/javascript">
-		function func(i){
-			document.getElementById('test').innerHTML = i + " option selected";
-		}
-	</script>
+    -->
+    <h1>Question</h1>
+    <form action="#" METHOD="POST">
+        <input type="checkbox" value="option-1" name = "option-1">
+        <label>option 1</label>&nbsp;<label>count</label><br>
+        <!-- on click the box above  it should acivate the checkbox and hide the check box-->
+        <input type="checkbox" value="option-2" name = "option-2">
+        <label>option 2</label>&nbsp;<label>count</label><br>
+        <!--single class for each option 
+            with id array
+
+            all options will be in a loop
+        -->      
+        
+        <input type="text" name = "option-n" placeholder="Enter your own option">
+        <!--add into array of options-->
+        
+        <input type="submit" value = "submit">
+
+    </form>
+
+    <!--
+        database should contain 
+        sl no 
+        option name 
+        option number 
+        option vote
+
+        (A new row will be created everytime for new option)
+        A TEXT FILE IS MAINTAINED for voters names and vote options
+        or another table created with voterid and their vote for back up and reversals
+    -->
 </body>
 </html>
